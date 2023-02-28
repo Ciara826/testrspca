@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RSPCA coding task</title>
+	<link rel="stylesheet" href="getDonationItem.css">
+	<!--<script src="donationItems.js"></script>
+	<script src="getDonationItem.js"></script>-->
+</head>
+
+<body>
+	<div class="alert">
+	
+		<!-- Close button -->
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		
+		<img class="logo" src="rspca.png">
+		
+		<h2>Donate today</h2> 
+		
+		<img class="dog" src="dog.png">
+		
+		<p>and be an <b>animal hero</b> like those before you</p>
+		
+		<div class="message-cleaner">
+		
+			<div class="box" id="box">
+				<p><b><span id="name"></span></b> donated <b>&pound;<span id="amount"></span></b> on <span id="time"></span></p>
+			</div>	
+			<div class="box" id="box">
+				<p><b><span id="name1"></span></b> donated <b>&pound;<span id="amount1"></span></b> on <span id="time1"></span></p>
+			</div>
+			<div class="box" id="box">		
+				<p><b><span id="name2"></span></b> donated <b>&pound;<span id="amount2"></span></b> on <span id="time2"></span></p>
+			</div>	
+			<div class="box" id="box">		
+				<p><b><span id="name3"></span></b> donated <b>&pound;<span id="amount3"></span></b> on <span id="time3"></span></p>
+			</div>	
+		</div>
+				<script>
+				
+				var box = document.getElementById("box");
+				
+				var donations = [
+					{
+					  "firstName":"Susan",
+					  "lastName":"Moolah",
+					  "donationAmount": 5.25,
+					  "donationTime": new Date(new Date().setMinutes(new Date().getMinutes() - 61))
+					},
+					{
+					  "firstName":"Bill",
+					  "lastName":"Cash",
+					  "donationAmount": 10.75,
+					  "donationTime": new Date(new Date().setHours(new Date().getHours() - 43))
+					},
+					{
+					  "firstName":"Terri",
+					  "lastName":"Dosh",
+					  "donationAmount": 15.00,
+					  "donationTime": new Date(new Date().setHours(new Date().getHours() - 25))
+					},
+					{
+					  "firstName":"Arthur",
+					  "lastName":"Dough",
+					  "donationAmount": 20.51,
+					  "donationTime": new Date(new Date().setMinutes(new Date().getMinutes() - 9))
+					}
+				  ];
+				  
+				document.getElementById("name").innerHTML = donations[0].firstName;
+				document.getElementById("amount").innerHTML = donations[0].donationAmount;
+				document.getElementById("time").innerHTML = donations[0].donationTime;
+				document.getElementById("name1").innerHTML = donations[1].firstName;
+				document.getElementById("amount1").innerHTML = donations[1].donationAmount;
+				document.getElementById("time1").innerHTML = donations[1].donationTime;
+				document.getElementById("name2").innerHTML = donations[2].firstName;
+				document.getElementById("amount2").innerHTML = donations[2].donationAmount;
+				document.getElementById("time2").innerHTML = donations[2].donationTime;
+				document.getElementById("name3").innerHTML = donations[3].firstName;
+				document.getElementById("amount3").innerHTML = donations[3].donationAmount;
+				document.getElementById("time3").innerHTML = donations[3].donationTime;
+
+				</script>	
+		
+		</div>
+	</div>
+
+</body>
+
+</html>
